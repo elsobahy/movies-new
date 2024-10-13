@@ -28,7 +28,7 @@ export default function Register() {
         if (checkErrors?.error) {
           setValidErrors(checkErrors.error.details);
         } else {
-          axios.post('http://hawas.runasp.net/api/v1/Register', formData)
+          axios.post('https://hawas.runasp.net/api/v1/Register', formData)
           .then((res) => {
               setValidErrors([]);
               navigate('/login');

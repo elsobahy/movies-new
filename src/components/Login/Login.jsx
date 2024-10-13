@@ -26,7 +26,7 @@ export default function Login({ saveUserData }) {
     if (checkErrors?.error) {
       setValidErrors(checkErrors.error.details);
     } else {
-      axios.post('http://hawas.runasp.net/api/v1/Login', formData)
+      axios.post('https://hawas.runasp.net/api/v1/Login', formData)
         .then((res) => {
             
           localStorage.setItem("my-token", res.data.jwt);
